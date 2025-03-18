@@ -8,7 +8,7 @@
 ✨ CSS  
 ✨ JavaScript
 
-## [미리보기](https://github.com/sbi1024/lg-bootcamp-5-introduction)
+## [미리보기](https://enchanting-meerkat-59a9ef.netlify.app/)
 
 ### 사진 1 (메인 화면)
 <img width="1873" alt="Image" src="https://github.com/user-attachments/assets/81c0d211-36e5-4f29-bbe3-82687055e12e"/>
