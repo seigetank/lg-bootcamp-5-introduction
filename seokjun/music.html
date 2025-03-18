@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        /* 그리드 레이아웃 설정 */
+        .artist-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3열 설정 */
+            gap: 20px; /* 간격 설정 */
+            max-width: 900px; /* 최대 너비 제한 */
+            margin: 20px auto; /* 가운데 정렬 */
+            padding: 20px;
+            border: 2px dashed black;
+        }
+
+        /* 이미지 스타일 */
+        .artist-container img {
+            width: 200px; /* 칸에 맞게 이미지 크기 조정 */
+            height: auto;
+        }
+
+        /* iframe 스타일 */
+        .artist-container iframe {
+            width: 200px;
+            height: 100%;
+        }
+
+        /* 섹션 제목 스타일 */
+        h2 {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="mainpage.html"><h3>home</h3> </a>
+    <h1>Music</h1>
+    <hr> 
+
+    <!-- 좋아하는 가수 섹션 -->
+    <h2>The Strokes</h2>
+
+    <div class="artist-container">
+        <!-- 1행: 가수 프로필, 앨범1, 앨범2 -->
+        <img src="/seokjun/img/strokes.jpg" alt="스트록스">
+        <img src="/seokjun/img/strokes2.jpg" alt="스트록스 앨범1">
+        <img src="/seokjun/img/strokes3.jpg" alt="스트록스 앨범2">
+
+        <!-- 2행: YouTube iframe 3개 -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TOypSnKFHrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pT68FS3YbQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Xt_F4J4O-xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- 두 번째 가수 추가 가능 -->
+    <h2>King Gnu</h2>
+
+    <div class="artist-container">
+        <img src="/seokjun/img/kinggnu.jpg" alt="킹누 프로필">
+        <img src="/seokjun/img/kinggnu2.jpg" alt="킹누 앨범1">
+        <img src="/seokjun/img/kinggnu3.jpg" alt="킹누 앨범2">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/C47K1TX9PAA?si=WmVIbTEvwCwSnXJy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XPUN-w543bc?si=LlhhoXBqvm5pO9DA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RLAw8Ct9k48?si=NPlv4_4Tss4CjJ9W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+</body>
+</html>

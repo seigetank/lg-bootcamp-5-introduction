@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>About Doyeon</title>
+    <style>
+        .header,
+        .footer {
+            border-bottom: 2px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .divider {
+            width: 100%;
+            margin: 20px 0;
+            border-top: 2px dashed #aaa;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            text-align: center;
+            background: #f8f8f8;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            left: 10%;
+        }
+
+        .memoji {
+            width: 200px;
+            height: auto;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            font-size: 24px;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 0;
+            color: #5f6a7d;
+        }
+
+        .comment {
+            font-size: 10px;
+            color: darkgray;
+        }
+
+        .btn {
+            display: block;
+            background: white;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #5f6a7d;
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background: #f7f7f7;
+            transform: scale(1.05);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="date-time"></div>
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <img src="hi.png" class="memoji">
+        <h1>Hi there! I'm Doyeon</h1>
+
+        <div class="header"></div><br>
+        <div class="social-icons">
+            <a href="https://github.com/doyeonLee-Luna" target="_blank">
+                <img src="github.png" alt="Github" style="width: 40px; height: 40px; transition: transform 0.3s;">
+            </a>
+            <a href="https://www.linkedin.com/in/doyeon-lee-1647b8341/" target="_blank">
+                <img src="linkedin.png" alt="Linkedin" style="width: 40px; height: 40px; transition: transform 0.3s;">
+            </a>
+            <a href="https://www.instagram.com/samoyed.salt?igsh=dnVwczNkYzljdm51&utm_source=qr" target="_blank">
+                <img src="insta.png" alt="instagram" style="width: 40px; height: 40px; transition: transform 0.3s;">
+            </a>
+        </div>
+
+        <p class="comment">Click the icons to contact me</p>
+        <div class="footer"></div>
+
+        <!-- Content Sections -->
+        <div id="fluffy-content" class="hidden">
+            <h2>My Fluffy</h2>
+            <p>Here is some fluffy content about my pet!</p>
+        </div>
+
+        <a href="javascript:void(0);" class="btn" id="myFluffyBtn">🐾My Fluffy</a>
+        <a href="mbti.html" class="btn">✨ MBTI</a>
+        <a href="anything.html" class="btn">...</a>
+    </div>
+
+    <script>
+        // "My Fluffy" 버튼 클릭 시 콘텐츠 표시
+        document.getElementById('myFluffyBtn').addEventListener('click', function() {
+            var fluffyContent = document.getElementById('fluffy-content');
+            fluffyContent.classList.toggle('hidden'); // 콘텐츠 보이기/숨기기
+        });
+    </script>
+
+</body>
+
+</html>

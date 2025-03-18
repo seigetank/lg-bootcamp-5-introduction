@@ -1,0 +1,26 @@
+/* 전체 페이지 여백 조정 */
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: red; /* 기본 색상 설정 */
+    display: inline; /* 한 줄 전체 차지하지 않도록 설정 */
+  }
+
+  /* 마우스 호버 시 스타일 */
+  a:hover {
+    color: blue; /* 마우스를 올렸을 때 색 변경 */
+  }
+
+  /* 방문한 링크 스타일 */
+  a:visited {
+    color: red; /* 방문 후에도 색 유지 */
+  }
+
+  /* 클릭 중인 링크 스타일 */
+  a:active {
+    color: black; /* 클릭할 때 색 변경 */
+  }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈</title>
+    <script src="../index.js" defer></script> 
+    <link rel="stylesheet" href="style.css"> <!-- External CSS -->
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+        }
+        .link-table {
+            width: 50%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .link-table td {
+            padding: 15px;
+        }
+        .link-table img {
+            width: 920px;
+            height: 520px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 0.1px solid gray; /* 테두리 색상 추가 */
+            transition: transform 0.3s ease-in-out;
+            animation: floating 3s infinite ease-in-out;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>홈</h1>
+        <nav>
+            <a href="about.html">자기소개</a>
+            <a href="gallery.html">웃긴 무도 짤</a>
+        </nav>
+    </header>
+    <section>
+        <h2>안녕하세요, 저는 서보인 입니다.</h2>
+        <p style="color: blue;">웹 개발을 좋아하며, 다양한 기술을 배우는 중입니다 !</p> <!-- Inline CSS 적용 -->
+        <p style="color: blue;">저의 대한 더 많은 관심이 생기셨다면, 아래의 이미지를 클릭해 주세요 !</p>
+        <p style="color: blue;"> 저의 GITHUB와 GITHUB로 운영중인 블로그 입니다 !</p>
+    </section>
+    <section class="links">
+        <table class="link-table">
+            <tr>
+                <td>
+                    <a href="https://github.com/sbi1024" target="_blank">
+                        <img src="image1.png" alt="GitHub 로고">
+                        <!-- <p>GitHub</p> -->
+                    </a>
+                </td>
+                <td>
+                    <a href="https://sbi1024.github.io/" target="_blank">
+                        <img src="image2.png" alt="블로그 로고">
+                        <!-- <p>블로그</p> -->
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        
+    </footer>
+</body>
+</html>
