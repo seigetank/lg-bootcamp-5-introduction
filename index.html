@@ -1,115 +1,139 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>5조 메인 페이지</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            /* text-align: center; */
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-        .description {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-        .button-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .button {
-            display: inline-block;
-            padding: 15px 20px;
-            /* background-color: #007bff; */
-            color: black;
-            text-decoration: none;
-            /* border-radius: 5px; */
-            font-size: 1em;
-            text-align: center;
-            border: 2px solid black;
-        }
-        .button:hover {
-            background-color: #a8c8eb;
-        }
-        .apply-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            /* background-color: #28a745; */
-            font-size: 1.2em;
-        }
-        .apply-button:hover {
-            background-color: #6ec481;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        /* text-align: center; */
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+      .description {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+      }
+      .button-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .button {
+        display: inline-block;
+        padding: 15px 20px;
+        /* background-color: #007bff; */
+        color: black;
+        text-decoration: none;
+        /* border-radius: 5px; */
+        font-size: 1em;
+        text-align: center;
+        border: 2px solid black;
+      }
+      .button:hover {
+        background-color: #a8c8eb;
+      }
+      .apply-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px 30px;
+        /* background-color: #28a745; */
+        font-size: 1.2em;
+      }
+      .apply-button:hover {
+        background-color: #6ec481;
+      }
 
-        .scroll-box {
+      .scroll-box {
         width: auto;
         height: 150px;
         border: 1px solid #ddd;
         padding: 10px;
         overflow-y: auto; /* 세로 스크롤 */
         overflow-x: hidden; /* 가로 스크롤 방지 */
-    }
-
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1>5조</h1>
-        <p class="description">유레카! 안녕 우린 5조야</p>
-        <hr>
-        <br>
 
-        <div class="button-container">
-            <a href="/seokjun/mainpage.html" class="button">홍석준</a>
-            <a href="/boin/index.html" class="button">서보인</a>
-            <a href="/seungwoo/index.html" class="button">신승우</a>
-            <a href="jeongmin/main.html" class="button">김정민</a>
-            <a href="/doyeon/index.html" class="button">이도연</a>
-            <a href="/jongkyu/main.html" class="button">이종규</a>
-        </div>
-        
-        <hr>
-        <h3>신청자 목록</h3>
-        <div class="scroll-box">
-            
-        </div>
-        <br>
-        <hr>
-        <a href="/apply.html" class="button apply-button">신청하기</a>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@hot-page/hotfx-slinky@0.0.0/dist/hotfx-slinky.js"
+      type="text/javascript"
+      defer=""
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap")
+      layer(external);
+
+      section {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+      }
+
+      hotfx-slinky {
+        text-transform: uppercase;
+        font-family: Righteous, sans-serif;
+        white-space: nowrap;
+        margin: 32px 0 64px;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <hotfx-slinky>
+          <h1 class="description">유레카! 안녕 우린 5조야</h1>
+        </hotfx-slinky>
+      </section>
+      <hr />
+      <br />
+
+      <div class="button-container">
+        <a href="/seokjun/mainpage.html" class="button">홍석준</a>
+        <a href="/boin/index.html" class="button">서보인</a>
+        <a href="/seungwoo/index.html" class="button">신승우</a>
+        <a href="jeongmin/main.html" class="button">김정민</a>
+        <a href="/doyeon/index.html" class="button">이도연</a>
+        <a href="/jongkyu/main.html" class="button">이종규</a>
+      </div>
+
+      <hr />
+      <h3>신청자 목록</h3>
+      <div class="scroll-box"></div>
+      <br />
+      <hr />
+      <a href="/apply.html" class="button apply-button">신청하기</a>
     </div>
 
     <script>
-        window.onload = function () {
-            let applicantList = document.querySelector(".scroll-box");
-            let applicants = JSON.parse(localStorage.getItem("applicants")) || [];
-    
-            applicantList.innerHTML = ""; // 기존 내용 초기화
-    
-            if (applicants.length === 0) {
-                applicantList.innerHTML = "<p>아직 신청자가 없습니다.</p>";
-            } else {
-                applicants.forEach(applicant => {
-                    let newEntry = document.createElement("p");
-                    newEntry.textContent = `${applicant.name}(${applicant.gender}) | ${applicant.major} | ${applicant.languages} | (${applicant.reason})`;
-                    applicantList.appendChild(newEntry);
-                });
-            }
-        };
+      window.onload = function () {
+        let applicantList = document.querySelector(".scroll-box");
+        let applicants = JSON.parse(localStorage.getItem("applicants")) || [];
+
+        applicantList.innerHTML = ""; // 기존 내용 초기화
+
+        if (applicants.length === 0) {
+          applicantList.innerHTML = "<p>아직 신청자가 없습니다.</p>";
+        } else {
+          applicants.forEach((applicant) => {
+            let newEntry = document.createElement("p");
+            newEntry.textContent = `${applicant.name}(${applicant.gender}) | ${applicant.major} | ${applicant.languages} | (${applicant.reason})`;
+            applicantList.appendChild(newEntry);
+          });
+        }
+      };
     </script>
-</body>
+  </body>
 </html>
