@@ -55,21 +55,61 @@
         .apply-button:hover {
             background-color: #6ec481;
         }
+
+        .scroll-box {
+        width: auto;
+        height: 150px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        overflow-y: auto; /* 세로 스크롤 */
+        overflow-x: hidden; /* 가로 스크롤 방지 */
+    }
+
     </style>
 </head>
 <body>
     <div class="container">
         <h1>5조</h1>
         <p class="description">유레카! 안녕 우린 5조야</p>
+        <hr>
+        <br>
+
         <div class="button-container">
             <a href="/seokjun/mainpage.html" class="button">홍석준</a>
             <a href="/boin/index.html" class="button">서보인</a>
-            <a href="/seungwoo/index.html" class="button">신승우</a>
+            <a href="https://example.com/page3" class="button">신승우</a>
             <a href="jeongmin/main.html" class="button">김정민</a>
             <a href="/doyeon/index.html" class="button">이도연</a>
-            <a href="/jongkyu/main.html" class="button">이종규</a>
+            <a href="https://example.com/page6" class="button">이종규</a>
         </div>
+        
+        <hr>
+        <h3>신청자 목록</h3>
+        <div class="scroll-box">
+            
+        </div>
+        <br>
+        <hr>
         <a href="/apply.html" class="button apply-button">신청하기</a>
     </div>
+
+    <script>
+        window.onload = function () {
+            let applicantList = document.querySelector(".scroll-box");
+            let applicants = JSON.parse(localStorage.getItem("applicants")) || [];
+    
+            applicantList.innerHTML = ""; // 기존 내용 초기화
+    
+            if (applicants.length === 0) {
+                applicantList.innerHTML = "<p>아직 신청자가 없습니다.</p>";
+            } else {
+                applicants.forEach(applicant => {
+                    let newEntry = document.createElement("p");
+                    newEntry.textContent = `${applicant.name}(${applicant.gender}) | ${applicant.major} | ${applicant.languages} | (${applicant.reason})`;
+                    applicantList.appendChild(newEntry);
+                });
+            }
+        };
+    </script>
 </body>
 </html>

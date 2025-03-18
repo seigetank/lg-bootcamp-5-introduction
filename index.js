@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const topButton = document.createElement("button");
-  topButton.innerText = "Go to Home";
+  topButton.innerText = "유레카! 안녕 우린 5조야 페이지로 이동";
   topButton.style.position = "fixed";
   topButton.style.bottom = "20px";
   topButton.style.right = "20px";

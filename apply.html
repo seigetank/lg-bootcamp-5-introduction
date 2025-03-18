@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5조 참가 신청서</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F8F9FA;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #container {
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #343A40;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #CED4DA;
+            border-radius: 5px;
+        }
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        #btnLanguage, #btnRegister {
+            width: 100%;
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #btnLanguage:hover, #btnRegister:hover {
+            background: #0056B3;
+        }
+        #inputLanguagesResults {
+            margin-top: 10px;
+            padding: 10px;
+            background: #E9ECEF;
+            border-radius: 5px;
+        }
+        hr {
+            margin: 20px 0;
+        }
+        /* 반응형 디자인 */
+        @media (max-width: 450px) {
+            #container {
+                width: 90%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>5조 참가 신청서</h2>
+        <hr>
+        <form id="registerForm">
+            <label for="userName">이름</label>
+            <input id="userName" type="text" />
+            <label for="userEmail">e-mail</label>
+            <input id="userEmail" type="email" />
+            <label>성별</label>
+            <input id="male" type="radio" name="gender" value="M"><label for="male" style="display:inline;">남</label>
+            <input id="female" type="radio" name="gender" value="F" checked><label for="female" style="display:inline;">여</label>
+            <label for="major">전공</label>
+            <select name="major" id="major" multiple>
+                <option value="M">전공</option>
+                <option value="NM" selected>비전공</option>
+            </select>
+            <label for="languageName">구현 가능한 언어</label>
+            <input id="languageName" type="text" />
+            <label>수준</label>
+            <input id="top" type="radio" name="ability" value="상"><label for="top" style="display:inline;">상</label>
+            <input id="middle" type="radio" name="ability" value="중" checked><label for="middle" style="display:inline;">중</label>
+            <input id="bottom" type="radio" name="ability" value="하"><label for="bottom" style="display:inline;">하</label>
+            <input id="btnLanguage" type="button" value="언어 추가" />
+            <div id="inputLanguagesResults"></div>
+            <label for="desc">5조와 함께하고 싶은 이유</label>
+            <textarea name="desc" id="desc" cols="30" rows="4"></textarea>
+        </form>
+        <input id="btnRegister" type="button" value="5조와 함께하기">
+        <hr>
+    </div>
+    <script>
+        window.onload = function () {
+            let languages = []; // 사용자가 추가한 언어 목록
+    
+            document.querySelector("#btnLanguage").onclick = function () {
+                let language = document.querySelector("#languageName").value.trim();
+                let ability = document.querySelector("input[name='ability']:checked").value;
+    
+                if (language === "") {
+                    alert("언어를 입력하세요!");
+                    return;
+                }
+    
+                let entry = `${language}(${ability})`; // "Java(상)" 형태로 저장
+                if (!languages.includes(entry)) {
+                    languages.push(entry);
+                    document.querySelector("#inputLanguagesResults").innerHTML = languages.join(", "); // 콤마(,)로 구분
+                }
+    
+                document.querySelector("#languageName").value = ""; // 입력창 초기화
+            };
+    
+            document.querySelector("#btnRegister").onclick = function () {
+                let userName = document.querySelector("#userName").value.trim();
+                let userEmail = document.querySelector("#userEmail").value.trim();
+                let gender = document.querySelector("input[name='gender']:checked").value;
+                let major = document.querySelector("#major").value === "M" ? "전공" : "비전공";
+                let reason = document.querySelector("#desc").value.trim();
+    
+                if (userName === "" || userEmail === "" || reason === "") {
+                    alert("모든 필수 항목을 입력하세요.");
+                    return;
+                }
+    
+                let userData = {
+                    name: userName,
+                    gender: gender === "M" ? "남" : "여",
+                    major: major,
+                    languages: languages.join(", "), // "Java(상), Python(하)" 형태로 저장
+                    reason: reason
+                };
+    
+                let applicants = JSON.parse(localStorage.getItem("applicants")) || [];
+                applicants.push(userData);
+                localStorage.setItem("applicants", JSON.stringify(applicants));
+    
+                alert("5조 참여 신청이 완료되었습니다!");
+                window.location.href = "/index.html"; // 신청 후 메인 페이지로 이동
+            };
+        };
+    </script>
+</body>
+</html>
