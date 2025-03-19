@@ -1,36 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>자기소개</title>
-</head>
-<style>
-    .menu {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding: 10px;
-        background-color: #f0f0f0;
-        font-size: 18px;
-    }
-    .menu a {
-        text-decoration: none;
-        color: black;
-        padding: 5px 15px;
-        border-radius: 5px;
-    }
-    .menu .selected {
-        background-color: #333;
-        color: white;
-    }
-</style>
-<body>
-    <div class="menu">
-        <a href="index.html">보드게임</a>
-        <a href="game.html">게임</a>
-        <a href="profile.html" class="selected">자기소개</a>
-    </div>
     
+    <!-- Bootstrap 5.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="https://ssaangn.com/">자기소개페이지</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">보드게임</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="game.html">게임</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="profile.html">자기소개</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div style="text-align: center; margin-top: 20px;">
         <h2>자기소개</h2>
         <img src="img/myphoto.jpg" alt="내 사진" style="width: 200px; height: auto; border-radius: 10px;">
@@ -45,5 +47,9 @@
             <li>2025! - 새로운 도전 중~</li>
         </ul>
     </div>
+
+    <!-- Bootstrap 5.2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
